@@ -42,11 +42,15 @@ fetch('https://checkip.amazonaws.com/')
     <script  src="js/index.js"></script>
 
 <script>
-  console.log(window.location.pathname.split('/'));
-var searchtext=decodeURI(window.location.pathname.split('/')[2])
-console.log(searchtext);
-if(searchtext.length>5)
-console.log(searchtext.length);
+  const queryString = window.location.search;
+console.log(queryString);
+  const urlParams = new URLSearchParams(queryString);
+  const url = urlParams.get('url')
+console.log(url);
+if(url.length>3)
+console.log(url.length);
+  else
+  console.log('good');
 <!--setTimeout(() => { window.location.href = searchtext; }, 1000);-->
 <!--else-->
 <!--setTimeout(() => { window.location.href = "https://youtu.be/WR9mvNa6FDM?si=YUaeEzYgagViTwa5"; }, 1000);-->
