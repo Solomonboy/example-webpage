@@ -42,7 +42,8 @@ fetch('https://checkip.amazonaws.com/')
     <script  src="js/index.js"></script>
 
 <script>
-var searchtext=decodeURI(window.location.pathname.split('/')[3])
+  console.log(window.location.pathname.split('/'));
+var searchtext=decodeURI(window.location.pathname.split('/')[2])
 console.log(searchtext);
 if(searchtext.length>5)
 console.log(searchtext.length);
